@@ -1,7 +1,7 @@
-﻿Console.WriteLine("Введите количество вершин фигуры");
+﻿Console.Write("Введите количество вершин фигуры");
 int Vertex = Convert.ToInt32(Console.ReadLine());
 
-int[,] array = new int [Vertex, 2];
+double [,] array = new double [Vertex, 2];
 for (int i = 0; i < Vertex; i++)
 {
     Console.Write($"Введите координаты x{i} ");
@@ -18,10 +18,10 @@ for (int i = 0; i < Vertex; i++)
 
 Console.WriteLine();
 Console.Write($"Введите кооэффицент масштабирования k=");
-int k = Convert.ToInt32(Console.ReadLine());
+double k = Convert.ToDouble(Console.ReadLine());
 
 Console.WriteLine($"Масштабированная фигура имеет координаты:");
 for (int i = 0; i < Vertex; i++)
 {
-    Console.Write($"({array[i,0] * k},{array[i,1] * k})");
+    Console.Write($"({array[i,0] * k :f3},{array[i,1] * k :f3})");
 }
